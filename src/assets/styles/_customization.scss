@@ -1,0 +1,333 @@
+.customaization-sec {
+    width: 100%;
+    height: auto;
+    padding: 80px 0;
+
+    @media screen and (max-width: 990px) {
+        padding: 32px 0 0px;
+    }
+
+    .heading {
+        width: 100%;
+        text-align: center;
+        @media screen and (max-width: 990px) {
+            display: none;
+        }
+        h1 {
+            font-size: 32px;
+            font-family: $SUIT-variable;
+            font-weight: 700;
+            line-height: 100%;
+            color: $blue-22;
+            margin: 0;
+        }
+    }
+
+    .setting-section {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+
+        @media screen and (max-width: 990px) {
+            margin-top: 0px;
+        }
+
+        .reset-area {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            align-items: center;
+            font-size: 16px;
+            color: $black-18;
+            font-weight: 600;
+            line-height: 100%;
+            @media screen and (max-width: 767px) {
+                margin: 8px 0 16px;
+                // position: fixed;
+                // top: 79px;
+                // left: calc(50% - 86px);
+                // z-index: 87;
+                // padding: 16px 24px;
+                // background: #fff;
+                // width: auto;
+                // border-radius: 30px;
+                // font-size: 14px;
+            }
+
+            a {
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .setting-box {
+            width: 100%;
+            padding: 32px;
+            height: 797px;
+            overflow-y: auto;
+            background-color: $white-ff;
+            box-shadow: 0px 2px 6px 0px rgba(0, 93, 172, 0.12);
+            border-radius: 8px;
+            margin-top: 8px;
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
+            position: relative;
+            @media screen and (max-width: 990px) {
+                padding: 0;
+                height: calc(100vh - 130px);
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .main-area {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                gap: 24px;
+
+                &:last-child{
+                    padding-bottom: 20px;
+                }
+
+                .left-setting {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+                    @media screen and (max-width: 990px) {
+                        gap: 8px;
+                        align-items: flex-start;
+                    }
+
+                    .logo {
+                        width: 80px;
+                        height: 80px;
+                        @media screen and (max-width: 990px) {
+                            width: 36px;
+                            height: 36px;
+                        }
+                    }
+
+
+                    .left-message {
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 16px;
+                        flex-wrap: wrap;
+                        @media screen and (max-width: 990px) {
+                            gap: 4px;
+                            width: calc(100% - 44px);
+                        }
+                        p {
+                            font-size: 14px;
+                            color: #222059;
+                            font-weight: 600;
+                            line-height: 140%;
+                            padding: 12px 24px;
+                            border-radius: 0px 20px 20px 20px;
+                            border: 1px solid #E5EBFF;
+                            background: #EFF2FD;
+                            box-shadow: 0px 2px 6px 0px rgba(0, 93, 172, 0.12);
+                            width: auto;
+                            font-family: $SUIT-variable;
+
+                        }
+
+                    }
+                }
+
+                .right-setting {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    .right-mmessage {
+                        width: 80%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 16px 30px;
+                        flex-wrap: wrap;
+
+                        p {
+                            width: auto;
+                            padding: 12px 24px;
+                            border-radius: 20px 20px 0px 20px;
+                            border: 2px solid #0C60C2;
+                            background: #FFF;
+                            box-shadow: 0px 2px 6px 0px rgba(0, 93, 172, 0.12);
+                            color: #0C60C2;
+                            font-size: 14px;
+                            font-family: $SUIT-variable;
+                            font-weight: 600;
+                            line-height: 140%;
+
+                            &.non-border-shadow {
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 140%;
+                                color: #222059;
+                                width: auto;
+                                padding: 12px 24px;
+                                border-radius: 20px 20px 0px 20px;
+                                border: 1px solid #EFF2FD;
+                                background: #FFF;
+                                box-shadow: 0px 2px 6px 0px rgba(0, 93, 172, 0.12);
+                            }
+
+                            &.options {
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 140%;
+                                font-family: $SUIT-variable;
+                                color: #222059;
+                                width: auto;
+                                padding: 12px 24px;
+                                border-radius: 20px;
+                                border: 1px solid #EFF2FD;
+                                background: #FFF;
+                                box-shadow: 0px 2px 6px 0px rgba(0, 93, 172, 0.12);
+
+                                &.active {
+                                    border: 1px solid #0C60C2;
+                                    color: #0C60C2;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+                .submit-btn-setting {
+                    width: 100%;
+                    text-align: right;
+
+                    button {
+                        padding: 16px 32px;
+                        background-color: #0C60C2;
+                        color: #fff;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 100%;
+                        width: 100%;
+
+                        &.disable {
+                            background-color: #e0e0e0;
+                        }
+                    }
+                }
+            }
+
+            .chat-section {
+                // width: calc(100% - 60px);
+                // height: auto;
+                // position: absolute;
+                // bottom: 30px;
+                // left:  30px;
+                // @media screen and (max-width: 990px) {
+                //     position: fixed;
+                //     z-index: 999;
+                //     width: calc(100% - 30px);
+                //     left:  15px;
+                //     bottom: 15px;
+                // }
+                .chat {
+                    padding: 9px 10px 9px 16px;
+                    background-color: $white-ff;
+                    border-radius: 50px;
+                    border: 1px solid #E5EBFF;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+
+                    input {
+                        width: calc(100% - 60px);
+                        height: auto;
+                        border: 0;
+                    }
+
+                    button {
+                        background-color: transparent;
+                        border: 0;
+                        padding: 0;
+                    }
+                }
+
+                .errormsg {
+                    color: red;
+                    margin-top: 5px;
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .button-area {
+            width: 100%;
+            height: auto;
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width: 990px) {
+                margin-top: 30px;
+            }
+
+            button {
+                width: 290px;
+                padding: 15px 16px;
+                border-radius: 4px;
+                background: #0C60C2;
+                font-size: 14px;
+                color: #FFF;
+                font-weight: 600;
+                line-height: 100%;
+                border: 0;
+            }
+        }
+    }
+}
+
+
+.coustomize-body{
+    position: relative;
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto;
+    //border: 1px solid red;
+}
+
+.customaization-sec .setting-section .setting-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.customaization-sec .setting-section .setting-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+.customaization-sec .setting-section .setting-box::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+.customaization-sec .setting-section .setting-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}

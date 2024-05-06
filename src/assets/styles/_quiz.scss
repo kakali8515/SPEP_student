@@ -1,0 +1,242 @@
+.quiz_top_card {
+  background-color: $color-ff;
+  box-shadow: 0 2px 6px rgba(($blue-00), 12%);
+  padding: 16px 76px 16px 32px;
+  position: relative;
+  @media (max-width: 767px) {
+    padding: 16px 70px 16px 15px;
+  }
+  h2 {
+    color: $grey-82;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 9px;
+  }
+
+  h3 {
+    color: $grey-33;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  span {
+    color: $grey-BD;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .bookmark {
+    position: absolute;
+    right: 32px;
+    top: 16px;
+  }
+}
+
+.quiz_bottom_card {
+  background-color: $color-ff;
+  box-shadow: 0 2px 6px rgba(($blue-00), 12%);
+  padding: 32px;
+  position: relative;
+  margin-top: 20px;
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+    padding: 15px;
+  }  
+  .quiz_inner_body {
+    display: grid;
+    gap: 32px;
+    h2 {
+      color: $grey-33;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      &.color-deep {
+        color: $black18;
+      }
+      &.color-blue {
+        color: $blue-22;
+      }
+      &.fs-20 {
+        font-size: 20px;
+      }
+    }
+    p {
+      color: $grey-66;
+      font-size: 14px;
+      font-weight: 600;
+       + p {
+        margin-top: 6px;
+       }
+       .deep-gray {
+          color: $grey-33;
+       }
+       &.color-deep {
+        color: $black18;
+      }
+      &.color-blue {
+        color: $blue-22;
+      }
+      .fs-16 {
+        font-size: 16px;
+      }
+    }
+    .single_quiz_textbox {
+      display: grid;
+      gap: 24px;
+      .textbox_holder {
+        margin-bottom: 16px;
+        h2 {
+          display: inline-block;
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .button-wrap {
+    position: relative;
+    text-align: center;
+    @media (max-width: 767px) {
+      padding: 32px 0px 0;
+    }  
+    .centered_but {
+      max-width: 110px;
+      padding: 12px 15px;
+      margin: 0 auto;
+      @media (max-width: 767px) {
+        max-width: none;
+      }
+    }
+    .tip_answer {
+      position: absolute;
+      left: 0;
+      color: $red-FA;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      @media (max-width: 767px) {
+        right: 0;
+        top: 0;
+        left: auto;
+        margin-top: 0;
+      }
+    }
+  }
+  .course-pagination {
+    margin-top: 0;
+  }
+  .play-icon {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    h2 {
+      font-size: 20px;
+      color: $blue-22;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+  }
+}
+.answer_box {
+  border-bottom: 1px solid $black-00;
+  text-align: center;
+  margin: 0 10px;
+  max-width: 140px;
+  @media (max-width: 767px) {
+    margin: 0 4px;
+    max-width: 135px;
+  }
+}
+.check_option {
+  ul {
+    li {
+      position: relative;
+      + li {
+        margin-top: 16px;
+      }
+      input[type=radio] {
+        position: absolute;
+        opacity: 0;
+      }
+      span {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 24px;
+        top: 25px;
+        &:after {
+          content: "";
+          position: absolute;
+          height: 9px;
+          width: 18px;
+          border-bottom: 3px solid $grey-e4;
+          border-left: 3px solid $grey-e4;
+          transform: rotate(-45deg);
+          left: 4px;
+          top: 5px;
+        }
+      }
+      input[type=radio]:checked {
+        + span {
+          &:after {
+            border-bottom: 3px solid $blue-0C;
+            border-left: 3px solid $blue-0C;
+          }
+          + label {
+            border: 2px solid $blue-558;
+            background-color: $white-EF;
+
+          }
+        }
+      }
+      label {
+        background-color: $grey-FAF;
+        padding: 24px;
+        border-radius: 8px;
+        padding-left: 68px;
+        color: $grey-66;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 0;
+        width: 100%;
+        border: 2px solid $grey-FAF;
+        em {
+          font-style: normal;
+        }
+      }
+    }
+  }
+  &.check-option-true {
+    ul {
+      display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        @media (max-width: 767px) {
+          gap: 16px;
+        }
+      li {
+        display: inline-block;
+        min-width: 200px;
+        @media (max-width: 767px) {
+          min-width: 148px;
+        }
+        + li {
+          margin-top: 0;
+        }
+        span {
+          display: none;
+        }
+        label {
+          padding-left: 24px;
+          text-align: center;
+          @media (max-width: 767px) {
+            padding: 12px;
+          }
+        }
+      }
+    }
+  }
+}

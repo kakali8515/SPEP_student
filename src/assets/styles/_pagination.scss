@@ -1,0 +1,52 @@
+.course-pagination {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .prev,
+  .next {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &.disabled {
+      button {
+        cursor: default;
+        pointer-events: none;
+        svg {
+          path {
+            stroke: $grey-8f;
+          }
+        }
+      }
+      span {
+        color: $grey-8f;
+      }
+    }
+    span {
+      color: $black-18;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+      display: contents;
+    }
+  }
+  .next {
+    button {
+      transform: rotate(180deg);
+    }
+  }
+  .counter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $grey-8f;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    .current {
+      color: $blue-0C;
+      min-width: 15px;
+      text-align: center;
+    }
+  }
+}
